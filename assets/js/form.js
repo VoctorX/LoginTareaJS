@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const recaptchaResponse = grecaptcha.getResponse();
         if (recaptchaResponse.length === 0) {
             alert('Por favor, completa el reCAPTCHA para continuar.');
-            return; // Detiene el proceso si el reCAPTCHA está vacío
+            return;
         }
 
         if (!email || !password) {
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (foundUser) {
             alert('¡Inicio de sesión exitoso!');
+            sessionStorage.setItem('loggedInUser', JSON.stringify(foundUser));
             window.location.href = 'home.html';
         } else {
             alert('Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.');
