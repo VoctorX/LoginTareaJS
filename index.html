@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini CRUD - Lista de Tareas</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Acceso</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+    <script src="assets/js/form.js" defer></script> 
 </head>
 <body>
-  <h1>📋 Mi Lista de Tareas</h1>
-  <h3>Digitas tus tareas en la siguiente lista: </h3>
-  <input type="text" id="tarea" placeholder="Escribe una tarea...">
-  <button class="add-btn" onclick="agregarTarea()">Agregar</button>
-  <ul id="lista"></ul>
+    <div class="form-container">
+
+        <div id="loginForm">
+            <form action="#" method="POST">
+                <h2>Iniciar Sesión</h2>
+                <div>
+                    <label for="login-email">Correo Electrónico:</label>
+                    <input type="email" id="login-email" name="email" placeholder="tu@correo.com" required>
+                </div>
+                <div>
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" placeholder="Tu contraseña" required>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LeFAQQsAAAAAC3cahd2ORpygctn4lqPIm9cUXbD"></div>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+            <p>¿No tienes una cuenta? <a href="#" onclick="showSignup(event)">Regístrate aquí</a></p>
+        </div>
+
+        <div id="signupForm" style="display: none;">
+            <form action="#" method="POST">
+                <h2>Registrarse</h2>
+                <div>
+                    <label for="signup-name">Nombre:</label>
+                    <input type="text" id="signup-name" name="name" placeholder="Digita tu nombre" required>
+                </div>
+                <div>
+                    <label for="signup-email">Correo Electrónico:</label>
+                    <input type="email" id="signup-email" name="email" placeholder="tu@correo.com" required>
+                </div>
+                <div>
+                    <label for="signup-password">Contraseña:</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Crea una contraseña" required>
+                </div>
+                <input type="submit" value="Registrarse">
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="#" onclick="showLogin(event)">Inicia sesión aquí</a></p>
+        </div>
+    </div>
 </body>
 </html>
