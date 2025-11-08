@@ -60,7 +60,7 @@ proyecto/
 
 1. **Clonar o descargar el proyecto**
    ```bash
-   git clone [URL-del-repositorio]
+   git clone [https://github.com/VoctorX/LoginTareaJS]
    ```
 
 2. **Abrir el proyecto**
@@ -157,7 +157,7 @@ proyecto/
 ---
 
 ## Fecha 
-* *Octubre 30 del 2025*
+* *Noviembre 7 del 2025*
 
 ---
 
